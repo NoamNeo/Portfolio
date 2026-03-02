@@ -1,0 +1,93 @@
+/* Grupo de variables */
+:root {
+    --bodyBackgroundColor: rgb(169, 213, 224);
+    --mainBackgroundColor: rgb(255,255,255);
+    --headerBackgroundColor: rgb(200,123,100);
+    --shadowColor: rgb(177, 177, 177);
+    --header2Color: rgb(124,125,200);
+}
+/* Grupo de reglas de reseteo */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* Grupo de normas para el tamaño y la sobra de la imagen de perfil */
+img {
+    height: 8vw;
+    width: 8vw;
+    border-radius: 50%;
+    box-shadow: 4px 7px 30px var(--shadowColor);
+}
+a {
+    text-decoration: none;
+}
+body {
+    background-color: var(--bodyBackgroundColor);
+    margin-top: 3vw;   
+    margin-bottom: 5vw;   
+    margin-left: 10vw;
+    margin-right: 10vw;
+
+    main {
+        background-color: var(--mainBackgroundColor) ;
+        margin-bottom: 3vw;
+        border-radius: 0.8vw;
+        display: flex;
+        aside {
+            background-color: var(--headerBackgroundColor);
+            padding: 1.5vw;
+            border-radius: 0.8vw 0px 0px 0.8vw;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            h1 {
+                text-align: center;
+            }
+        }
+
+        article {
+            padding: 1vw;
+
+            /* h2::before {
+                content: "";
+                position: absolute;
+                left: 0;
+                top: 6px;
+                width: 6px;
+                height: 70%;
+                border-radius: 4px;
+                background:linear-gradient(var(--headerBackgroundColor), var(--header2Color) ) ;
+            } */
+        }
+    }
+
+    footer {
+        background-color: var(--mainBackgroundColor);
+        padding: 3vw;
+        border-radius: 0.8vw;
+        display: flex;
+        a {
+            margin: 1vw;
+        }
+    }
+}
+ul {
+    list-style: none;
+
+    li {
+        background-color: white;
+        margin: 0.5vw;
+        padding-left: 3vw;
+        padding-right: 3vw;
+        padding-top: 0.3vw;
+        padding-bottom: 0.3vw;
+        border-radius: 0.6vw;
+    }
+}
+.apartado {
+    h2 {
+        color: var(--header2Color);
+    }
+}
