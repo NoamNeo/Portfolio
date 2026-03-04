@@ -3,39 +3,27 @@
 :root {
 	/* Catppuccin Mocha Palette - Bold Dark Theme */
 	--base: #11111b;
-	--mantle: #0d0d12;
 	--crust: #000000;
 	--text: #cdd6f4;
 	--subtext: #a6adc8;
-	--overlay: #6c7086;
 	--surface2: #45475a;
 	--surface1: #313244;
 	--surface0: #1e1e2e;
 	--lavender: #b4befe;
 	--blue: #89b4fa;
-	--sapphire: #74c7ec;
-	--teal: #94e2d5;
-	--green: #a6e3a1;
-	--yellow: #f9e2af;
 	--peach: #fab387;
 	--maroon: #eba0ac;
-	--red: #f38ba8;
 	--mauve: #cba6f7;
 	--flamingo: #f2cdcd;
 	--pink: #f5c2e7;
-	--rosewater: #f5e0dc;
 
 	/* Semantic variables - Bold Dark Theme */
-	--bodyBackgroundColor: linear-gradient(180deg, var(--peach), var(--mauve), var(--lavender));
 	--mainBackgroundColor: var(--base);
-	--headerBackgroundColor: linear-gradient(180deg, var(--peach), var(--mauve));
 	--headerBackgroundSolid: var(--peach);
 	--shadowColor: rgba(0, 0, 0, 0.6);
-	--header2Color: var(--lavender);
 	--cardBackground: var(--surface1);
 	--cardAccent: var(--flamingo);
 	--sliderTrack: var(--surface2);
-	--sliderProgressColor: var(--mauve);
 	--textColor: var(--text);
 	--titleTextColor: var(--blue);
 	--subTitleTextColor: var(--surface1);
@@ -93,27 +81,21 @@ h4 {
 	font-weight: 400;
 }
 body {
-	background: var(--bodyBackgroundColor);
 	color: var(--textColor);
-	margin: 0;
 	min-width: 320px;
 	display: flex;
 	flex-direction: column;
 
 	main {
 		background-color: var(--mainBackgroundColor);
-		margin-bottom: 0;
-		border-radius: 0;
 		border: 1px solid var(--borderColor);
 		display: flex;
 		flex: 1 1 auto;
 		overflow-y: visible;
 
 		aside {
-			background: var(--headerBackgroundColor);
 			background-color: var(--headerBackgroundSolid);
 			padding: 1.5vw;
-			border-radius: 0;
 			border-right: 1px solid var(--borderColor);
 			display: flex;
 			flex-direction: column;
@@ -164,7 +146,6 @@ body {
 	footer {
 		background-color: var(--mainBackgroundColor);
 		padding: 1.5vw;
-		border-radius: 0;
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: space-between;
@@ -219,11 +200,6 @@ ul {
 	}
 }
 .apartado {
-
-	h2 {
-		color: var(--titleTextColor);
-	}
-
 	> p {
 		margin-bottom: 1.2vw;
 		padding-left: 1vw;
@@ -307,7 +283,7 @@ p.slider::after {
 	background: var(--sliderTrack);
 	height: 0.6vw;
 	width: 100%;
-	top: 1.5vw;
+	top: 2vw;
 	left: 0px;
 	border-radius: 0.3vw;
 	z-index: 1;
@@ -318,7 +294,7 @@ p.slider::before {
 	background: linear-gradient(90deg, var(--lavender), var(--mauve), var(--flamingo));
 	height: 0.6vw;
 	width: var(--sliderProgress);
-	top: 1.5vw;
+	top: 2vw;
 	left: 0px;
 	border-radius: 0.3vw;
 	z-index: 2;
@@ -411,7 +387,7 @@ p.slider::before {
 
 	p.slider::after,
 	p.slider::before {
-		top: 3vw;
+		top: 4vw;
 		height: 1.5vw;
 	}
 
