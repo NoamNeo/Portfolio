@@ -26,28 +26,54 @@
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus perferendis necessitatibus libero adipisci sit temporibus aperiam alias deserunt incidunt, aliquam iusto beatae doloremque nostrum magnam architecto illum eligendi, corrupti ad.</p>
           </header>
         </section>
-        <section class="apartado" id="habilidades">
+        <section class="apartado">
           <h2>Habilidades</h2>
-          <div class="capsula">
-            <p>Ingles C1</p>
+          <section id="habilidades">
+            <div class="capsula">
+              Inglés C1
+            </div>
+            <div class="capsula">
+              Trabajo en equipo
+            </div>
+            <div class="capsula">
+              Resolución de problemas
+            </div>
+            <div class="capsula">
+              Adaptabilidad
+            </div>
+          </section>
+          <div class="contenedorSliders">
+            <p class="slider" data-progress="75">Java</p>
+            <p class="slider" data-progress="85">HTML/CSS</p>
+            <p class="slider" data-progress="45">Java</p>
+            <p class="slider" data-progress="25">Java</p>
           </div>
-          <div class="capsula">
-            <p>Trabajo en equipo</p>
-          </div>
-          <div class="capsula">
-            <p>Resolución de problemas</p>
-          </div>
-          <div class="capsula">
-            <p>Adaptabilidad</p>
+          <div class="contenedorTarjetas">
+            <div class="tarjeta"></div>
+            <div class="tarjeta"></div>
+            <div class="tarjeta"></div>
+            <div class="tarjeta"></div>
           </div>
         </section>
       </article>
     </main>
     <footer>
       <p>&copy;2026·Gabriela Loira·Desenvolvemento de Aplicaciones Multiplataforma</p>
-      <a href="#Placeholder">Linkedin</a>
-      <a href="#Placeholder">GitHub</a>
-      <a href="#Placeholder">Email</a>
+        <div id="navFooter">
+          <a href="#Placeholder">Linkedin</a>
+          <a href="#Placeholder">GitHub</a>
+          <a href="#Placeholder">Email</a>
+        </div>
     </footer>
+    <script>
+      function initSliders() {
+        document.querySelectorAll('p.slider').forEach(slider => {
+          const progress = slider.dataset.progress + '%';
+
+          slider.style.setProperty('--sliderProgress', progress);
+        });
+      }
+      initSliders();
+    </script>
   </body>
 </html>
