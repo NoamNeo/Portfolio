@@ -1,7 +1,9 @@
+/* ========== Fuente externa ========== */
 @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&display=swap');
 
+/* ========== Variables CSS ========== */
+/* Paleta de colores - Catppuccin Mocha Bold Dark Theme */
 :root {
-	/* Catppuccin Mocha Palette - Bold Dark Theme */
 	--base: #11111b;
 	--crust: #000000;
 	--text: #cdd6f4;
@@ -16,8 +18,10 @@
 	--mauve: #cba6f7;
 	--flamingo: #f2cdcd;
 	--pink: #f5c2e7;
+}
 
-	/* Semantic variables - Bold Dark Theme */
+/* Variables semánticas - Colores para componentes */
+:root {
 	--mainBackgroundColor: var(--base);
 	--headerBackgroundSolid: var(--peach);
 	--shadowColor: rgba(0, 0, 0, 0.6);
@@ -34,7 +38,9 @@
 	--sliderProgress: 50%;
 	--borderColor: var(--surface2);
 }
-/* Grupo de reglas de reseteo */
+
+/* ========== Reglas de reseteo ========== */
+/* Eliminar márgenes y paddings por defecto, configurar box-sizing y fuente base */
 *{
 	margin: 0;
 	padding: 0;
@@ -42,7 +48,8 @@
 	font-family: 'Fira Code', monospace;
 }
 
-/* Grupo de normas para el tamaño y la sobra de la imagen de perfil */
+/* ========== Estilos base de elementos ========== */
+/* Imágenes - Tamaño, borde y sombra de la imagen de perfil */
 img {
 	height: 6vw;
 	width: 6vw;
@@ -52,15 +59,19 @@ img {
 	border: 3px solid var(--mauve);
 	box-shadow: 0 0 20px var(--shadowColor);
 }
+
+/* Enlaces - Quitar decoración por defecto */
 a {
 	text-decoration: none;
 }
 
+/* Párrafos - Color e interlineado */
 p {
 	color: var(--textColor);
 	line-height: 1.6;
 }
 
+/* Títulos h2 - Tamaño responsivo, color y margen */
 h2 {
 	position: relative;
 	padding-left: 1vw;
@@ -69,23 +80,29 @@ h2 {
 	margin-bottom: 0.8vw;
 }
 
+/* Títulos h3 - Tamaño responsivo y color */
 h3 {
 	color: var(--textColor);
 	font-size: clamp(0.8rem, 1.5vw, 1.2rem);
 	margin-bottom: 0.4vw;
 }
 
+/* Títulos h4 - Tamaño responsivo, color y peso */
 h4 {
 	color: var(--subtext);
 	font-size: clamp(0.6rem, 1.2vw, 0.8rem);
 	font-weight: 400;
 }
+
+/* ========== Estructura de la página ========== */
+/* body - Contenedor principal con flexbox en columna */
 body {
 	color: var(--textColor);
 	min-width: 320px;
 	display: flex;
 	flex-direction: column;
 
+	/* main - Área de contenido principal */
 	main {
 		background-color: var(--mainBackgroundColor);
 		border: 1px solid var(--borderColor);
@@ -93,6 +110,7 @@ body {
 		flex: 1 1 auto;
 		overflow-y: visible;
 
+		/* aside - Barra lateral con información de perfil */
 		aside {
 			background-color: var(--headerBackgroundSolid);
 			padding: 1.5vw;
@@ -102,6 +120,7 @@ body {
 			align-items: center;
 			width: 25%;
 
+			/* h1 - Nombre en la barra lateral */
 			h1 {
 				text-align: center;
 				font-size: clamp(1.2rem, 2.5vw, 2.5rem);
@@ -109,10 +128,12 @@ body {
 				font-weight: 600;
 			}
 
+			/* h2 - Subtítulo en la barra lateral */
 			h2 {
 				color: var(--subTitleTextColor);
 			}
 
+			/* nav - Navegación en la barra lateral */
 			nav {
 				width: 100%;
 				display: flex;
@@ -124,12 +145,14 @@ body {
 			}
 		}
 
+		/* article - Área de contenido principal */
 		article {
 			padding: 1.5vw;
 			flex: 1;
 			overflow-y: visible;
 			width: 75%;
 
+			/* h2::before - Elemento decorativo antes de los títulos */
 			h2::before {
 				content: "";
 				position: absolute;
@@ -143,6 +166,7 @@ body {
 		}
 	}
 
+	/* footer - Pie de página */
 	footer {
 		background-color: var(--mainBackgroundColor);
 		padding: 1.5vw;
@@ -152,11 +176,13 @@ body {
 		align-items: center;
 		border: 1px solid var(--borderColor);
 		
+		/* p - Texto del pie de página */
 		p {
 			color: var(--subtext);
 			font-size: clamp(0.6rem, 1vw, 0.8rem);
 		}
 
+		/* a - Enlaces del pie de página */
 		a {
 			margin: 1vw;
 			color: var(--linkTextColor);
@@ -168,10 +194,14 @@ body {
 		}
 	}
 }
+
+/* ========== Navegación ========== */
+/* ul - Lista de navegación en la barra lateral */
 ul {
 	list-style: none;
 	width: 100%;
 
+	/* li - Elementos de la lista */
 	li {
 		background-color: var(--linkBackground);
 		margin: 0.6vw 0.8vw;
@@ -181,6 +211,7 @@ ul {
 		transition: all 0.3s ease;
 		min-width: 80%;
 
+		/* a - Enlaces con padding para hacer clickeable toda el área */
 		a {
 			padding: 0.8vw 1.5vw;
 			color: var(--linkTextColor);
@@ -189,6 +220,7 @@ ul {
 			height: 100%;
 		}
 
+		/* Hover - Efecto al pasar el ratón */
 		&:hover {
 			background-color: var(--linkHoverBackground);
 			transform: translateY(-2px);
@@ -199,17 +231,23 @@ ul {
 		}
 	}
 }
+
+/* ========== Componentes de sección ========== */
+/* .apartado - Secciones de contenido */
 .apartado {
+	/* p - Párrafos dentro de secciones */
 	> p {
 		margin-bottom: 1.2vw;
 		padding-left: 1vw;
 	}
 
+	/* #habilidades - Contenedor flexbox para las capsulas */
 	#habilidades {
 		display: flex;
 		flex-wrap: wrap;
 		gap: 0.4vw;
 
+		/* .capsula - Estilos de las capsulas de habilidades */
 		.capsula {
 			flex-grow: 1;
 			text-align: center;
@@ -224,6 +262,8 @@ ul {
 	}
 }
 
+/* ========== Tarjetas ========== */
+/* .tarjeta - Diseño base de tarjetas (fondo, padding, sombra) */
 .tarjeta {
 	background: linear-gradient(145deg, var(--surface1), var(--surface0));
 	padding: 1.5vw;
@@ -240,12 +280,14 @@ ul {
 	box-shadow: 0 4px 15px var(--shadowColor);
 }
 
+/* .tarjeta[data-link] - Tarjetas interactivas con efecto hover */
 .tarjeta[data-link]:hover {
 	transform: translateY(-5px);
 	z-index: 1;
 	box-shadow: 0 8px 25px var(--shadowColor);
 }
 
+/* .tarjeta::before - Elemento decorativo en la esquina */
 .tarjeta::before {
 	content: "";
 	background: linear-gradient(135deg, var(--flamingo), var(--pink), var(--mauve));
@@ -257,18 +299,26 @@ ul {
 	height: 2.5vw;
 	border-radius: 2.5vw 0px 0px 0px;
 }
+
+/* ========== Contenedores ========== */
+/* .contenedorTarjetas - Contenedor flexbox para tarjetas */
 .contenedorTarjetas {
 	display: flex;
 	flex-wrap: wrap;
 	gap: 1.2vw;
 	padding: 0.8vw 0;
 }
+
+/* .contenedorSliders - Contenedor flexbox para sliders */
 .contenedorSliders {
 	display: flex;
 	flex-wrap: wrap;
 	gap: 1.5vw;
 	padding: 0.8vw 0;
 }
+
+/* ========== Sliders de habilidades ========== */
+/* p.slider - Configuración base del slider */
 p.slider {
 	position: relative;
 	flex-grow: 1;
@@ -277,6 +327,8 @@ p.slider {
 	color: var(--textColor);
 	padding-bottom: 1.5vw;
 }
+
+/* p.slider::after - Barra de fondo (track) del slider */
 p.slider::after {
 	content: "";
 	position: absolute;
@@ -288,6 +340,8 @@ p.slider::after {
 	border-radius: 0.3vw;
 	z-index: 1;
 }
+
+/* p.slider::before - Barra de progreso del slider */
 p.slider::before {
 	content: "";
 	position: absolute;
@@ -300,18 +354,23 @@ p.slider::before {
 	z-index: 2;
 }
 
+/* ========== Media queries ========== */
+/* Configuración responsive - Ajustes para pantallas menores a 768px */
 @media (max-width: 768px) {
+	/* body - Contenedor principal responsive */
 	body {
-
+		/* main - Cambio a columna */
 		main {
 			flex-direction: column;
 
+			/* aside - Ancho completo y border-radius superior */
 			aside {
 				border-radius: 0.8vw 0.8vw 0 0;
 				padding: 3vw;
 				width: 100%;
 			}
 
+			/* article - Ancho completo */
 			article {
 				padding: 2vw;
 				width: 100%;
@@ -319,10 +378,11 @@ p.slider::before {
 		}
 	}
 
+	/* .apartado - Secciones responsive */
 	.apartado{
-		
+		/* #habilidades - Contenedor de habilidades responsive */
 		#habilidades {
-			
+			/* .capsula - Capsulas responsive */
 			.capsula {
 				flex-grow: 1;
 				text-align: center;
@@ -330,6 +390,7 @@ p.slider::before {
 		}
 	}
 
+	/* img - Imágenes responsive */
 	img {
 		width: 20vw;
 		height: 20vw;
@@ -337,27 +398,33 @@ p.slider::before {
 		min-height: 80px;
 	}
 
+	/* h1 - Títulos h1 responsive */
 	h1 {
 		font-size: clamp(1.2rem, 5vw, 2rem);
 	}
 
+	/* h2 - Títulos h2 responsive */
 	h2 {
 		font-size: clamp(1.2rem, 4vw, 2rem);
 	}
 
+	/* ul - Lista de navegación responsive */
 	ul {
 		display: flex;
 		gap: 1.5vw;
 
+		/* li - Elementos de lista responsive */
 		li {
 			flex-grow: 1;
 			min-width: 0%;
 		}
 	}
 
+	/* ul li - Estilos específicos para li responsive */
 	ul li {
 		margin: 1vw 0;
 
+		/* a - Enlaces responsive */
 		a {
 			padding-left: 2vw;
 			padding-right: 2vw;
@@ -366,31 +433,37 @@ p.slider::before {
 		}
 	}
 
+	/* .tarjeta y p.slider - Ancho completo */
 	.tarjeta,
 	p.slider {
 		flex-basis: 100%;
 	}
 
+	/* .tarjeta - Padding reducido */
 	.tarjeta {
 		padding: 4vw;
 	}
 
+	/* .contenedorTarjetas y .contenedorSliders - Gaps y padding reducidos */
 	.contenedorTarjetas,
 	.contenedorSliders {
 		gap: 2vw;
 		padding: 2vw;
 	}
 
+	/* .capsula - Padding reducido */
 	.capsula {
 		padding: 1vw;
 	}
 
+	/* p.slider::after y p.slider::before - Slider responsive */
 	p.slider::after,
 	p.slider::before {
 		top: 4vw;
 		height: 1.5vw;
 	}
 
+	/* footer - Padding y gap reducidos */
 	footer {
 		padding: 4vw;
 		gap: 2vw;
